@@ -1,0 +1,218 @@
+/* Definición de variables globales para paleta y espaciados */
+:root {
+    --color-primario: #2b5c3a; /* Verde oscuro (red de tenis) */
+    --color-secundario: #8cc63f; /* Verde brillante (pelota de tenis) */
+    --color-fondo: #f4f7f6; /* Gris muy claro minimalista */
+    --color-tarjeta: #ffffff;
+    --color-texto: #2c3e50;
+    --color-texto-claro: #7f8c8d;
+    --color-borde: #e0e6ed;
+    --color-error: #e74c3c;
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --sombra-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s ease;
+}
+
+/* Reseteo básico y tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Animaciones globales */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedores principales */
+main {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+    animation: fadeInSlideUp 0.6s ease-out forwards;
+}
+
+.login-container {
+    max-width: 400px;
+    margin-top: 10vh;
+    background-color: var(--color-tarjeta);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    border-top: 5px solid var(--color-secundario);
+}
+
+/* Cabeceras (Headers) */
+header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--color-tarjeta);
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    animation: fadeInSlideUp 0.4s ease-out forwards;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Formularios e Inputs */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: var(--transicion);
+    background-color: #fafafa;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    background-color: var(--color-tarjeta);
+    box-shadow: 0 0 0 3px rgba(140, 198, 63, 0.2);
+}
+
+/* Botones */
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion);
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+header button {
+    width: auto;
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+header button:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+#btn-comprar-horas {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+#btn-comprar-horas:hover {
+    background-color: var(--color-primario);
+}
+
+/* Estructuras de Cuadrícula (Admin y Alumno) */
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-container, .list-container, .clases-section {
+    background-color: var(--color-tarjeta);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* Estilo para las futuras tarjetas de clases (generadas por JS) */
+.clase-card {
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transicion);
+    border-left: 4px solid var(--color-secundario);
+}
+
+.clase-card:hover {
+    box-shadow: var(--sombra-suave);
+    transform: translateX(5px);
+}
+
+/* Mensajes de error y notificaciones */
+.error-message {
+    color: var(--color-error);
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 1.2rem;
+}
+
+/* Indicador de Horas */
+.horas-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--color-fondo);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--color-borde);
+}
+
+.horas-container strong {
+    color: var(--color-primario);
+    font-size: 1.3rem;
+}

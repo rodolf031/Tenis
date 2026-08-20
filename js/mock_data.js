@@ -1,4 +1,4 @@
-// Almacena la estructura de datos simulada para el funcionamiento del prototipo estático
+// mock_data.js
 const baseDatosSimulada = {
     usuarios: [
         {
@@ -27,13 +27,14 @@ const baseDatosSimulada = {
         }
     ],
     sedes: [
-        { id: 1, nombre: "Sede Norte" },
-        { id: 2, nombre: "Sede Sur" }
+        { id: 1, nombre: "Sede 1" },
+        { id: 2, nombre: "Sede 2" },
+        { id: 3, nombre: "Sede 3" }
     ],
     niveles: [
-        { id: 1, nombre: "Principiante" },
-        { id: 2, nombre: "Intermedio" },
-        { id: 3, nombre: "Avanzado" }
+        { id: 1, nombre: "Nivel 1" },
+        { id: 2, nombre: "Nivel 2" },
+        { id: 3, nombre: "Nivel 3" }
     ],
     clases: [
         {
