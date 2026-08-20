@@ -106,3 +106,12 @@ if (formCrearClase) {
 // Ejecuta las funciones iniciales al cargar el script
 inicializarFormulario();
 renderizarAlumnos();
+
+const btnLogout = document.getElementById('btn-logout');
+if (btnLogout) {
+    btnLogout.addEventListener('click', function() {
+        localStorage.removeItem('usuarioActivoId');
+        localStorage.removeItem('usuarioActivoRol');
+        window.location.href = 'index.html';
+    });
+}

@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Alumno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h2 id="nombre-alumno">Bienvenido, Alumno</h2>
-        <div class="horas-container">
-            <span>Horas disponibles: </span>
-            <strong id="saldo-horas">0</strong>
-        </div>
-        <button id="btn-comprar-horas">Comprar Paquete</button>
-        <button id="btn-logout">Cerrar Sesión</button>
-    </header>
+    <nav class="navbar">
+        <div class="logo">TenisPro Michell</div>
+        <button id="btn-logout" class="btn-secundario">Cerrar Sesión</button>
+    </nav>
 
-    <main>
+    <main class="dashboard-alumno">
+        <header class="header-alumno" style="background-image: linear-gradient(rgba(43, 92, 58, 0.8), rgba(43, 92, 58, 0.8)), url('assets/imagen3.jpg');">
+            <div>
+                <h2 id="nombre-alumno" class="texto-blanco">Bienvenido</h2>
+                <p class="texto-blanco">Controla tus clases y reservas desde aquí.</p>
+            </div>
+            <div class="horas-destacadas">
+                <span>Saldo de horas</span>
+                <strong id="saldo-horas">0</strong>
+                <button id="btn-comprar-horas" class="btn-accion-rapida">Recargar</button>
+            </div>
+        </header>
+
         <section id="notificaciones-container"></section>
 
-        <section class="clases-section">
-            <h3>Clases Disponibles</h3>
-            <div id="lista-clases-disponibles">
-                </div>
+        <section class="clases-promocionales">
+            <h3>Clases Disponibles Esta Semana</h3>
+            <div id="lista-clases-disponibles" class="grid-clases">
+                <!-- JavaScript inyectará las tarjetas aquí -->
+            </div>
         </section>
     </main>
 

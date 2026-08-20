@@ -4,35 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h2>Panel del Profesor</h2>
-        <button id="btn-logout">Cerrar Sesión</button>
-    </header>
+    <nav class="navbar">
+        <div class="logo">TenisPro Michell - Admin</div>
+        <button id="btn-logout" class="btn-secundario">Cerrar Sesión</button>
+    </nav>
 
-    <main>
+    <main class="dashboard-alumno">
+        <header class="header-alumno" style="background-image: linear-gradient(rgba(43, 92, 58, 0.9), rgba(43, 92, 58, 0.9));">
+            <div>
+                <h2 class="texto-blanco">Panel de Control del Profesor</h2>
+                <p class="texto-blanco">Gestiona horarios, sedes y audita las horas de tus alumnos.</p>
+            </div>
+        </header>
+
         <section class="admin-grid">
             <div class="form-container">
-                <h3>Programar Nueva Clase</h3>
+                <h3 style="color: var(--color-primario); margin-bottom: 1rem;">Programar Nueva Clase</h3>
                 <form id="form-crear-clase">
-                    <input type="date" id="fecha-clase" required>
-                    <input type="time" id="hora-clase" required>
-                    <select id="sede-clase" required>
-                        </select>
-                    <select id="nivel-clase" required>
-                        </select>
-                    <input type="number" id="capacidad-clase" min="4" max="8" placeholder="Capacidad (4-8)" required>
-                    <button type="submit">Crear Clase</button>
+                    <div class="form-group">
+                        <label for="fecha-clase">Fecha:</label>
+                        <input type="date" id="fecha-clase" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora-clase">Hora:</label>
+                        <input type="time" id="hora-clase" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sede-clase">Sede:</label>
+                        <select id="sede-clase" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel-clase">Nivel:</label>
+                        <select id="nivel-clase" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="capacidad-clase">Capacidad (4-8):</label>
+                        <input type="number" id="capacidad-clase" min="4" max="8" required>
+                    </div>
+                    <button type="submit" class="btn-primario-grande" style="width: 100%; margin-top: 1rem;">Crear Clase</button>
                 </form>
             </div>
 
             <div class="list-container">
-                <h3>Gestión de Alumnos</h3>
-                <div id="lista-alumnos">
-                    </div>
+                <h3 style="color: var(--color-primario); margin-bottom: 1rem;">Directorio de Alumnos</h3>
+                <div id="lista-alumnos" style="overflow-x: auto;">
+                    <!-- Tabla inyectada por JS -->
+                </div>
             </div>
         </section>
     </main>

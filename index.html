@@ -3,26 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Tenis - Iniciar Sesión</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Escuela de Tenis - Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main class="login-container">
-        <h1>Control de Clases de Tenis</h1>
-        <form id="login-form">
-            <div class="form-group">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" required>
+    <nav class="navbar">
+        <div class="logo">TenisPro Michell</div>
+        <button id="btn-login-nav" class="btn-secundario">Iniciar Sesión</button>
+    </nav>
+
+    <main class="landing-main">
+        <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/imagen1.jpg');">
+            <div class="hero-content">
+                <h1>Eleva tu juego al siguiente nivel</h1>
+                <p>Clases profesionales, torneos y clínicas intensivas para todas las edades.</p>
+                <button id="btn-inscribirme" class="btn-primario-grande">Inscribirme a Clases</button>
             </div>
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" required>
+        </section>
+
+        <section class="info-section">
+            <div class="info-text">
+                <h2>Nuevas Clases de Temporada</h2>
+                <p>Únete a nuestros grupos reducidos de 4 a 8 alumnos para garantizar atención personalizada. Reserva tus horarios en tiempo real sin complicaciones.</p>
             </div>
-            <button type="submit" id="btn-login">Ingresar</button>
-            <p id="login-error" class="error-message"></p>
-        </form>
+            <div class="info-image">
+                <img src="assets/imagen2.jpg" alt="Promoción Tenis">
+            </div>
+        </section>
     </main>
+
+    <div id="modal-login" class="modal-oculto">
+        <div class="modal-contenido">
+            <span id="cerrar-modal" class="btn-cerrar">&times;</span>
+            <h2>Acceso al Sistema</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+                <p id="login-error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
 
     <script src="js/mock_data.js"></script>
     <script src="js/auth.js"></script>
