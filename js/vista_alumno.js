@@ -1,5 +1,3 @@
-// vista_alumno.js
-
 const idUsuarioActivo = parseInt(localStorage.getItem('usuarioActivoId'));
 const rolUsuarioActivo = localStorage.getItem('usuarioActivoRol');
 

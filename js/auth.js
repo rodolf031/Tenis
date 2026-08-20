@@ -1,5 +1,3 @@
-// auth.js
-
 // Selecciona los elementos del DOM en la página de inicio de sesión
 const loginForm = document.getElementById('login-form');
 const errorMensaje = document.getElementById('login-error');

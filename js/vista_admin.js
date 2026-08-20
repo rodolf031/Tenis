@@ -1,5 +1,3 @@
-// vista_admin.js
-
 const idUsuarioActivo = parseInt(localStorage.getItem('usuarioActivoId'));
 const rolUsuarioActivo = localStorage.getItem('usuarioActivoRol');
 

@@ -1,4 +1,3 @@
-// mock_data.js
 const baseDatosSimulada = {
     usuarios: [
         {
