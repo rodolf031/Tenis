@@ -23,7 +23,7 @@ function renderizarClases() {
 
         // Aquí se inyecta la imagen promocional para cada clase
         tarjeta.innerHTML = `
-            <img src="assets/imagen4.jpg" alt="Clase de Tenis" class="tarjeta-img">
+            <img src="assets/img/imagen4.jpg" alt="Clase de Tenis" class="tarjeta-img">
             <div class="tarjeta-cuerpo">
                 <h4>${fechaFormateada(clase.fecha)} - ${clase.hora}</h4>
                 <p><strong>Sede:</strong> ${sede.nombre}</p>
